@@ -1,6 +1,6 @@
 # Facebook Marketplace Automation Tool
 
-This project automates tasks on Facebook Marketplace, such as listing items, managing data, and handling interactions. It includes a GUI, web scraping capabilities, data management, and testing.
+This project automates the process of scraping eBay listings and preparing them for upload to Facebook Marketplace. It extracts product information, calculates selling prices based on tax, additional profit, and Facebook fees, and saves images and descriptions along with other pre-set factors into a CSV file. The project also stores all products in a database to prevent duplicate uploads.
 
 ## Table of Contents
 - [Features](#features)
@@ -104,11 +104,11 @@ app = QApplication(sys.argv)
 window = MainWindow()
 window.show()
 sys.exit(app.exec_())
-
+```
 ### Web Scraping
 The scraping functionality parses HTML content to extract Marketplace listings.
 
-python
+```python
 Copy code
 import requests
 from bs4 import BeautifulSoup
@@ -126,10 +126,11 @@ def scrape_listings():
         listings.append({"title": title, "price": price, "location": location})
         
     return listings
+```
 ### Data Management with Pandas and SQLite
 The scraped data is stored in a Pandas DataFrame and saved to an SQLite database for persistent storage.
 
-python
+```python
 Copy code
 import pandas as pd
 import sqlite3
@@ -139,10 +140,11 @@ def save_to_database(listings):
     conn = sqlite3.connect('marketplace_listings.db')
     df.to_sql('listings', conn, if_exists='replace', index=False)
     conn.close()
+```
 ### Automated Testing with unittest
 Unit tests ensure the reliability of the functions and the overall script.
 
-python
+```python
 Copy code
 import unittest
 
@@ -162,5 +164,6 @@ class TestFacebookMarketplaceAutomation(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+```
 ## Contributing
 Contributions are welcome! Please submit a pull request or open an issue to discuss your ideas.
