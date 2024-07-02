@@ -12,7 +12,6 @@ This project automates tasks on Facebook Marketplace, such as listing items, man
   - [Data Management with Pandas and SQLite](#data-management-with-pandas-and-sqlite)
   - [Automated Testing with unittest](#automated-testing-with-unittest)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 - User-friendly GUI for managing automation tasks.
