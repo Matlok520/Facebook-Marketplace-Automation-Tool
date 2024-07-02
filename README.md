@@ -104,7 +104,8 @@ app = QApplication(sys.argv)
 window = MainWindow()
 window.show()
 sys.exit(app.exec_())
-Web Scraping
+
+### Web Scraping
 The scraping functionality parses HTML content to extract Marketplace listings.
 
 python
@@ -125,7 +126,7 @@ def scrape_listings():
         listings.append({"title": title, "price": price, "location": location})
         
     return listings
-Data Management with Pandas and SQLite
+### Data Management with Pandas and SQLite
 The scraped data is stored in a Pandas DataFrame and saved to an SQLite database for persistent storage.
 
 python
@@ -138,7 +139,7 @@ def save_to_database(listings):
     conn = sqlite3.connect('marketplace_listings.db')
     df.to_sql('listings', conn, if_exists='replace', index=False)
     conn.close()
-Automated Testing with unittest
+### Automated Testing with unittest
 Unit tests ensure the reliability of the functions and the overall script.
 
 python
@@ -161,5 +162,5 @@ class TestFacebookMarketplaceAutomation(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-Contributing
+## Contributing
 Contributions are welcome! Please submit a pull request or open an issue to discuss your ideas.
