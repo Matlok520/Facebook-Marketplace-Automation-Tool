@@ -1,54 +1,60 @@
-Facebook Marketplace Automation Tool
+# Facebook Marketplace Automation Tool
+
 This project automates tasks on Facebook Marketplace, such as listing items, managing data, and handling interactions. It includes a GUI, web scraping capabilities, data management, and testing.
 
-Table of Contents
-Features
-Installation
-Usage
-Components
-GUI with PyQt5
-Web Scraping
-Data Management with Pandas and SQLite
-Automated Testing with unittest
-Contributing
-License
-Features
-User-friendly GUI for managing automation tasks.
-Scraping and managing listings including titles, prices, and locations.
-Data storage using Pandas and SQLite.
-Automated tests to ensure script reliability.
-Installation
-Clone the repository:
+## Table of Contents
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Components](#components)
+  - [GUI with PyQt5](#gui-with-pyqt5)
+  - [Web Scraping](#web-scraping)
+  - [Data Management with Pandas and SQLite](#data-management-with-pandas-and-sqlite)
+  - [Automated Testing with unittest](#automated-testing-with-unittest)
+- [Contributing](#contributing)
+- [License](#license)
 
-bash
-Copy code
-git clone https://github.com/ShaffeCity/Facebook-Marketplace-Automation-Tool.git
-cd Facebook-Marketplace-Automation-Tool
-Install required packages:
+## Features
+- User-friendly GUI for managing automation tasks.
+- Scraping and managing listings including titles, prices, and locations.
+- Data storage using Pandas and SQLite.
+- Automated tests to ensure script reliability.
 
-bash
-Copy code
-pip install -r requirements.txt
-Usage
-Run the main script:
+## Installation
 
-bash
-Copy code
-python main.py
-Interact with the GUI:
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/ShaffeCity/Facebook-Marketplace-Automation-Tool.git
+    cd Facebook-Marketplace-Automation-Tool
+    ```
 
-Enter your Facebook credentials.
-Click "Login" to authenticate.
-Click "Start Scraping" to begin scraping Marketplace listings.
-View results:
+2. **Install required packages:**
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-Scraped data will be saved in an SQLite database (marketplace_listings.db).
-Components
-GUI with PyQt5
+## Usage
+
+1. **Run the main script:**
+    ```bash
+    python main.py
+    ```
+
+2. **Interact with the GUI:**
+    - Enter your Facebook credentials.
+    - Click "Login" to authenticate.
+    - Click "Start Scraping" to begin scraping Marketplace listings.
+
+3. **View results:**
+    - Scraped data will be saved in an SQLite database (`marketplace_listings.db`).
+
+## Components
+
+### GUI with PyQt5
+
 The PyQt5-based GUI allows users to input credentials, start scraping, and view results.
 
-python
-Copy code
+```python
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QWidget, QLabel, QLineEdit, QPushButton, QMessageBox
 from PyQt5.QtGui import QPalette, QColor
